@@ -2,7 +2,6 @@
 <html lang="pt-br">
 
 <head>
-    <!-- Metadados essenciais -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Academia Treinart - 24h para você, localizada em Juazeiro do Norte. Equipamentos de ponta e treinos personalizados.">
@@ -10,10 +9,6 @@
     <meta name="author" content="Academia Treinart">
     <meta name="robots" content="index, follow">
 
-    <!-- Título da Página -->
-    <title>Academia Treinart - 24 Horas</title>
-
-    <!-- Open Graph (para redes sociais) -->
     <meta property="og:title" content="Academia Treinart - 24 Horas em Juazeiro do Norte">
     <meta property="og:description" content="Academia 24h, equipamentos modernos e treinos exclusivos para você. Venha para a Academia Treinart!">
     <meta property="og:image" content="images/logo.jpg">
@@ -21,28 +16,22 @@
     <meta property="og:locale" content="pt_BR">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Cards -->
     <meta name="twitter:title" content="Academia Treinart - 24 Horas em Juazeiro do Norte">
     <meta name="twitter:description" content="A melhor academia de Juazeiro do Norte, funcionando 24h. Equipamentos modernos e ambiente motivador.">
     <meta name="twitter:image" content="images/logo.jpg">
 
-    <!-- Favicon -->
     <link rel="icon" href="logos/logo.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="logos/logo.png">
 
-    <!-- Fonte Google -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <!-- Estilos CSS -->
     <style>
-        /* Reset básico */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Corpo e fontes */
         body {
             background-color: #111;
             color: white;
@@ -56,7 +45,6 @@
             animation: fadeIn 1s ease-out forwards;
         }
 
-        /* Cabeçalho */
         header {
             text-align: center;
             padding: 20px;
@@ -64,7 +52,6 @@
             animation: fadeInUp 1.5s ease-out forwards;
         }
 
-        /* Títulos */
         h1 {
             color: #32CD32;
             animation-delay: 0.5s;
@@ -75,7 +62,6 @@
             animation-delay: 1s;
         }
 
-        /* Imagens da grade */
         #imagens img {
             width: 100%;
             border-radius: 10px;
@@ -89,16 +75,17 @@
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
         }
 
-        /* Botões */
         .cta {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             background-color: #32CD32;
-            padding: 15px 30px;
+            padding: 12px 25px;
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             text-decoration: none;
             border-radius: 5px;
             transition: transform 0.2s ease;
+            justify-content: center;
         }
 
         .cta:hover {
@@ -106,7 +93,11 @@
             background-color: #28a745;
         }
 
-        /* Efeito de Fade para as seções */
+        .cta img {
+            width: 18px;
+            margin-right: 8px;
+        }
+
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
@@ -117,7 +108,6 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -161,7 +151,6 @@
             color: #f00;
         }
 
-        /* Rodapé */
         footer {
             background-color: #111;
             padding: 20px;
@@ -180,7 +169,6 @@
             color: #28a745;
         }
 
-        /* Seção de Localização */
         #localizacao {
             text-align: center;
             margin: 40px 0;
@@ -191,14 +179,13 @@
             font-size: 16px;
         }
 
-        /* Mensalidade */
         #mensalidade {
             text-align: center;
-            margin: 40px 0;
+            margin: 30px 0;
         }
 
         #mensalidade img {
-            width: 60%;
+            width: 50%;
             margin-top: 20px;
             border-radius: 10px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -209,19 +196,16 @@
 
 <body>
 
-    <!-- Cabeçalho -->
     <header>
         <img src="logos/logo.png" alt="Logo da Academia Treinart" style="max-width: 200px;">
     </header>
 
-    <!-- Seção Principal -->
     <main>
         <h1>Academia 24h para Você</h1>
         <p>Venha treinar com a gente a qualquer hora do dia ou da noite. Equipamentos de ponta e ambiente motivador.</p>
         <a href="#mensalidade" class="cta">Veja Nossas Mensalidades</a>
     </main>
 
-    <!-- Seção de Imagens da Academia -->
     <section id="imagens">
         <h2>Veja como é o Interior da Academia</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
@@ -232,31 +216,27 @@
         </div>
     </section>
 
-    <!-- Seção de Localização -->
     <section id="localizacao">
         <h2>Estamos Aqui</h2>
         <p>Veja nossa localização no Google Maps clicando abaixo.</p>
         <a href="https://maps.app.goo.gl/XMueBbKhknLRoTXs7" target="_blank" class="cta">Ver no Google Maps</a>
     </section>
 
-    <!-- Seção de Mensalidade -->
     <section id="mensalidade">
         <h2>Valores da Mensalidade</h2>
         <img src="images/mensalidade.avif" alt="Valores da mensalidade">
         <a href="https://wa.me/5588993509111?text=Gostaria%20de%20mais%20informações%20sobre%20as%20mensalidades%20da%20Academia%20Treinart" class="cta">
-            <img src="images/whatsapp.avif" alt="WhatsApp" style="width: 20px; vertical-align: middle; margin-right: 8px;">
+            <img src="images/whatsapp.avif" alt="WhatsApp">
             Fale Conosco no WhatsApp
         </a>
     </section>
 
-    <!-- Rodapé -->
     <footer>
         <p>&copy; 2024 Academia Treinart | SITE DE REVENDEDOR</p>
         <p>Localizada na R. Santa Cecília, 176 - Socorro, Juazeiro do Norte - CE</p>
         <p><a href="https://wa.me/5588993509111">Entre em contato conosco</a></p>
     </footer>
 
-    <!-- Modal de Imagem -->
     <div id="myModal" class="modal">
         <span class="modal-close" onclick="closeModal()">&times;</span>
         <div class="modal-content">
@@ -265,18 +245,15 @@
     </div>
 
     <script>
-        // Abrir o modal com a imagem clicada
         function openModal(imageSrc) {
             document.getElementById("modalImage").src = imageSrc;
             document.getElementById("myModal").style.display = "flex";
         }
 
-        // Fechar o modal
         function closeModal() {
             document.getElementById("myModal").style.display = "none";
         }
     </script>
-
 </body>
 
 </html>
