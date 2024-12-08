@@ -31,12 +31,9 @@
     <link rel="apple-touch-icon" href="logos/logo.png">
 
     <!-- Fonte Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- Estilo -->
+    <!-- Incluindo Animações -->
     <style>
         /* Reset básico */
         * {
@@ -45,129 +42,79 @@
             box-sizing: border-box;
         }
 
+        /* Corpo e fontes */
         body {
-            background-color: #121212;
-            color: #fff;
+            background-color: #111;
+            color: white;
             font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
+        h1, h2, h3, p {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* Cabeçalho */
         header {
             text-align: center;
-            padding: 30px;
-        }
-
-        header img {
-            max-width: 180px;
-            margin: 0 auto;
-            display: block;
-        }
-
-        main {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        main h1 {
-            font-size: 2.5rem;
-            color: #32CD32;
-            margin-bottom: 15px;
-        }
-
-        main p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #ccc;
-        }
-
-        .cta {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 1rem;
-            color: #fff;
-            background-color: #32CD32;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .cta:hover {
-            background-color: #28a745;
-            transform: scale(1.05);
-        }
-
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #32CD32;
-        }
-
-        #imagens {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
             padding: 20px;
+            margin-top: 20px;
+            animation: fadeInUp 1.5s ease-out forwards;
         }
 
+        /* Títulos */
+        h1 {
+            color: #32CD32;
+            animation-delay: 0.5s;
+        }
+
+        h2 {
+            color: #32CD32;
+            animation-delay: 1s;
+        }
+
+        /* Imagens da grade */
         #imagens img {
             width: 100%;
             border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             cursor: pointer;
         }
 
         #imagens img:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
         }
 
-        footer {
-            background-color: #111;
-            color: #ccc;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: #32CD32;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #28a745;
-        }
-
-        .cta-map {
-            margin-top: 20px;
-            padding: 15px 30px;
-            color: #fff;
-            font-size: 1rem;
+        /* Botões */
+        .cta {
+            display: inline-block;
             background-color: #32CD32;
+            padding: 15px 30px;
+            color: white;
+            font-size: 18px;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: transform 0.2s ease;
         }
 
-        .cta-map:hover {
+        .cta:hover {
+            transform: scale(1.1);
             background-color: #28a745;
-            transform: scale(1.05);
         }
 
-        #mensalidade img {
-            max-width: 80%;
-            margin: 20px auto;
-            display: block;
+        /* Efeito de Fade para as seções */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         /* Modal */
@@ -182,17 +129,20 @@
             background-color: rgba(0, 0, 0, 0.7);
             justify-content: center;
             align-items: center;
+            overflow: auto;  /* Permite rolagem se o conteúdo for maior */
         }
 
         .modal-content {
             max-width: 90%;
             max-height: 80%;
             margin: auto;
+            overflow: hidden; /* Impede rolagem interna */
         }
 
         .modal-content img {
             width: 100%;
             height: auto;
+            max-height: 80vh;  /* Limita a altura da imagem no modal */
         }
 
         .modal-close {
@@ -211,100 +161,103 @@
             color: #f00;
         }
 
-        /* Corrigindo sobreposição */
-        #localizacao {
+        /* Rodapé */
+        footer {
+            background-color: #111;
+            padding: 20px;
             text-align: center;
-            padding: 40px 20px;
+            color: white;
+            margin-top: 40px;
         }
 
-        #localizacao p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #ccc;
+        footer a {
+            color: #32CD32;
+            text-decoration: none;
+            transition: color 0.2s ease;
         }
 
-        .cta-map {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+        footer a:hover {
+            color: #28a745;
         }
-
-        .cta-map i {
-            margin-right: 10px;
-        }
-
     </style>
+
 </head>
 
 <body>
 
     <!-- Cabeçalho -->
     <header>
-        <img src="logos/logo.png" alt="Logo da Academia Treinart">
+        <img src="logos/logo.png" alt="Logo da Academia Treinart" style="max-width: 200px;">
     </header>
 
     <!-- Seção Principal -->
     <main>
-        <h1>Treine 24 Horas Por Dia</h1>
-        <p>Academia com equipamentos modernos e ambiente ideal para você alcançar seus objetivos. Funcionamos 24h!</p>
-        <a href="#mensalidade" class="cta">Confira Nossos Planos</a>
+        <h1>Academia 24h para Você</h1>
+        <p>Venha treinar com a gente a qualquer hora do dia ou da noite. Equipamentos de ponta e ambiente motivador.</p>
+        
+        <a href="#mensalidade" class="cta">Veja Nossas Mensalidades</a>
     </main>
 
-    <!-- Galeria de Imagens -->
+    <!-- Seção de Imagens da Academia -->
     <section id="imagens">
-        <h2>Conheça Nosso Espaço</h2>
-        <img src="images/academia1.avif" alt="Academia Treinart - Foto 1" onclick="openModal(this)">
-        <img src="images/academia2.avif" alt="Academia Treinart - Foto 2" onclick="openModal(this)">
-        <img src="images/academia3.avif" alt="Academia Treinart - Foto 3" onclick="openModal(this)">
-        <img src="images/academia4.avif" alt="Academia Treinart - Foto 4" onclick="openModal(this)">
+        <h2>Veja como é o Interior da Academia</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+            <img src="images/academia1.avif" alt="Imagem da Academia 1" onclick="openModal('images/academia1.avif')">
+            <img src="images/academia2.avif" alt="Imagem da Academia 2" onclick="openModal('images/academia2.avif')">
+            <img src="images/academia3.avif" alt="Imagem da Academia 3" onclick="openModal('images/academia3.avif')">
+            <img src="images/academia4.avif" alt="Imagem da Academia 4" onclick="openModal('images/academia4.avif')">
+        </div>
     </section>
 
-    <!-- Localização -->
+    <!-- Seção de Localização -->
     <section id="localizacao">
         <h2>Estamos Aqui</h2>
         <p>Veja nossa localização no Google Maps clicando abaixo.</p>
-        <a href="https://maps.app.goo.gl/XMueBbKhknLRoTXs7" target="_blank" class="cta-map">
-            <i class="fas fa-map-marker-alt"></i> Ver no Google Maps
-        </a>
+        <a href="https://maps.app.goo.gl/XMueBbKhknLRoTXs7" target="_blank" class="cta">Ver no Google Maps</a>
     </section>
 
-    <!-- Mensalidades -->
+    <!-- Seção de Mensalidade -->
     <section id="mensalidade">
-        <h2>Planos de Mensalidade</h2>
-        <img src="images/mensalidade.avif" alt="Planos de mensalidade">
-        <a href="https://wa.me/5588993509111?text=Gostaria%20de%20saber%20mais%20sobre%20os%20planos" class="cta">
-            Fale com a Gente
+        <h2>Valores da Mensalidade</h2>
+        <img src="images/mensalidade.avif" alt="Valores da mensalidade" style="max-width: 60%; margin: 20px 0;">
+        <a href="https://wa.me/5588993509111?text=Gostaria%20de%20mais%20informações%20sobre%20as%20mensalidades%20da%20Academia%20Treinart" class="cta">
+            <img src="images/whatsapp.avif" alt="WhatsApp" style="width: 20px; vertical-align: middle; margin-right: 8px;">
+            Fale Conosco no WhatsApp
         </a>
     </section>
-
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-        <span class="modal-close" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-            <img id="modalImage" src="" alt="Imagem Ampliada">
-        </div>
-    </div>
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 Academia Treinart | Todos os direitos reservados</p>
-        <p>Endereço: R. Santa Cecília, 176 - Socorro, Juazeiro do Norte - CE</p>
-        <p><a href="https://wa.me/5588993509111">Contato via WhatsApp</a></p>
+        <p>&copy; 2024 Academia Treinart | SITE DE REVENDEDOR</p>
+        <p>Localizada na R. Santa Cecília, 176 - Socorro, Juazeiro do Norte - CE</p>
+        <p><a href="https://wa.me/5588993509111">Entre em contato conosco</a></p>
     </footer>
 
+    <!-- Modal de Imagem -->
+    <div id="myModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Imagem ampliada">
+        </div>
+    </div>
+
     <script>
-        // Função para abrir o modal
-        function openModal(img) {
-            var modal = document.getElementById("myModal");
-            var modalImg = document.getElementById("modalImage");
-            modal.style.display = "flex";
-            modalImg.src = img.src;
+        // Abrir o modal com a imagem clicada
+        function openModal(imageSrc) {
+            document.getElementById("modalImage").src = imageSrc;
+            document.getElementById("myModal").style.display = "flex";
         }
 
-        // Função para fechar o modal
+        // Fechar o modal
         function closeModal() {
-            var modal = document.getElementById("myModal");
-            modal.style.display = "none";
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // Fechar o modal se clicar fora da imagem
+        window.onclick = function (event) {
+            if (event.target == document.getElementById("myModal")) {
+                closeModal();
+            }
         }
     </script>
 
