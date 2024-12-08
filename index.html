@@ -33,6 +33,9 @@
     <!-- Fonte Google -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <!-- Estilo -->
     <style>
         /* Reset básico */
@@ -208,6 +211,28 @@
             color: #f00;
         }
 
+        /* Corrigindo sobreposição */
+        #localizacao {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        #localizacao p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        .cta-map {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-map i {
+            margin-right: 10px;
+        }
+
     </style>
 </head>
 
@@ -238,7 +263,9 @@
     <section id="localizacao">
         <h2>Estamos Aqui</h2>
         <p>Veja nossa localização no Google Maps clicando abaixo.</p>
-        <a href="https://maps.app.goo.gl/XMueBbKhknLRoTXs7" target="_blank" class="cta-map">Ver no Google Maps</a>
+        <a href="https://maps.app.goo.gl/XMueBbKhknLRoTXs7" target="_blank" class="cta-map">
+            <i class="fas fa-map-marker-alt"></i> Ver no Google Maps
+        </a>
     </section>
 
     <!-- Mensalidades -->
