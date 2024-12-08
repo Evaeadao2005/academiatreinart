@@ -33,7 +33,7 @@
     <!-- Fonte Google -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <!-- Incluindo Animações -->
+    <!-- Estilos CSS -->
     <style>
         /* Reset básico */
         * {
@@ -129,20 +129,20 @@
             background-color: rgba(0, 0, 0, 0.7);
             justify-content: center;
             align-items: center;
-            overflow: auto;  /* Permite rolagem se o conteúdo for maior */
+            overflow: auto;
         }
 
         .modal-content {
             max-width: 90%;
             max-height: 80%;
             margin: auto;
-            overflow: hidden; /* Impede rolagem interna */
+            overflow: hidden;
         }
 
         .modal-content img {
             width: 100%;
             height: auto;
-            max-height: 80vh;  /* Limita a altura da imagem no modal */
+            max-height: 80vh;
         }
 
         .modal-close {
@@ -179,6 +179,30 @@
         footer a:hover {
             color: #28a745;
         }
+
+        /* Seção de Localização */
+        #localizacao {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        #localizacao p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        /* Mensalidade */
+        #mensalidade {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        #mensalidade img {
+            width: 60%;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
     </style>
 
 </head>
@@ -194,7 +218,6 @@
     <main>
         <h1>Academia 24h para Você</h1>
         <p>Venha treinar com a gente a qualquer hora do dia ou da noite. Equipamentos de ponta e ambiente motivador.</p>
-        
         <a href="#mensalidade" class="cta">Veja Nossas Mensalidades</a>
     </main>
 
@@ -219,7 +242,7 @@
     <!-- Seção de Mensalidade -->
     <section id="mensalidade">
         <h2>Valores da Mensalidade</h2>
-        <img src="images/mensalidade.avif" alt="Valores da mensalidade" style="max-width: 60%; margin: 20px 0;">
+        <img src="images/mensalidade.avif" alt="Valores da mensalidade">
         <a href="https://wa.me/5588993509111?text=Gostaria%20de%20mais%20informações%20sobre%20as%20mensalidades%20da%20Academia%20Treinart" class="cta">
             <img src="images/whatsapp.avif" alt="WhatsApp" style="width: 20px; vertical-align: middle; margin-right: 8px;">
             Fale Conosco no WhatsApp
@@ -251,13 +274,6 @@
         // Fechar o modal
         function closeModal() {
             document.getElementById("myModal").style.display = "none";
-        }
-
-        // Fechar o modal se clicar fora da imagem
-        window.onclick = function (event) {
-            if (event.target == document.getElementById("myModal")) {
-                closeModal();
-            }
         }
     </script>
 
