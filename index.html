@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Metadados essenciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academia Treinart - 24h para você, localizada em Juazeiro do Norte. Equipamentos de ponta e treinos personalizados.">
+    <meta name="keywords" content="academia, 24 horas, Juazeiro do Norte, fitness, treino, musculação, saúde">
+    <meta name="author" content="Academia Treinart">
+    <meta name="robots" content="index, follow">
+
+    <!-- Título da Página -->
+    <title>Academia Treinart - 24 Horas</title>
+
+    <!-- Open Graph (para redes sociais) -->
+    <meta property="og:title" content="Academia Treinart - 24 Horas em Juazeiro do Norte">
+    <meta property="og:description" content="Academia 24h, equipamentos modernos e treinos exclusivos para você. Venha para a Academia Treinart!">
+    <meta property="og:image" content="images/logo.jpg">
+    <meta property="og:url" content="https://www.treinart.netlify.app">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:title" content="Academia Treinart - 24 Horas em Juazeiro do Norte">
+    <meta name="twitter:description" content="A melhor academia de Juazeiro do Norte, funcionando 24h. Equipamentos modernos e ambiente motivador.">
+    <meta name="twitter:image" content="images/logo.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/logos/logo.png">
+
+    <!-- Fonte Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Incluindo Animações -->
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo e fontes */
+        body {
+            background-color: #111;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, p {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+
+        /* Títulos */
+        h1 {
+            color: #32CD32;
+            animation-delay: 0.5s;
+        }
+
+        h2 {
+            color: #32CD32;
+            animation-delay: 1s;
+        }
+
+        /* Imagens da grade */
+        #imagens img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #imagens img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Botões */
+        .cta {
+            display: inline-block;
+            background-color: #32CD32;
+            padding: 15px 30px;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.2s ease;
+        }
+
+        .cta:hover {
+            transform: scale(1.1);
+            background-color: #28a745;
+        }
+
+        /* Efeito de Fade para as seções */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Animação para o Google Maps */
+        .cta-map {
+            display: inline-block;
+            background-color: #32CD32;
+            padding: 15px 30px;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-map:hover {
+            background-color: #28a745;
+            transform: scale(1.1);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #32CD32;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: #28a745;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <img src="logos/logo.jpg" alt="Logo da Academia Treinart" style="max-width: 200px;">
+    </header>
+
+    <!-- Seção Principal -->
+    <main>
+        <h1>Academia 24h para Você</h1>
+        <p>Venha treinar com a gente a qualquer hora do dia ou da noite. Equipamentos de ponta e ambiente motivador.</p>
+        
+        <a href="#mensalidade" class="cta">Veja Nossas Mensalidades</a>
+    </main>
+
+    <!-- Seção de Imagens da Academia -->
+    <section id="imagens">
+        <h2>Veja como é o Interior da Academia</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+            <img src="images/academia1.jpg" alt="Imagem da Academia 1">
+            <img src="images/academia2.jpg" alt="Imagem da Academia 2">
+            <img src="images/academia3.jpg" alt="Imagem da Academia 3">
+            <img src="images/academia4.jpg" alt="Imagem da Academia 4">
+        </div>
+    </section>
+
+    <!-- Seção de Localização -->
+    <section id="localizacao">
+        <h2>Visite-nos no Google Maps</h2>
+        <p>Clique no botão abaixo para ver a localização da nossa academia no Google Maps.</p>
+        <a href="https://maps.app.goo.gl/XMueBbKhknLRoTXs7" target="_blank" class="cta-map">
+            Ver no Google Maps
+        </a>
+    </section>
+
+    <!-- Seção de Mensalidade -->
+    <section id="mensalidade">
+        <h2>Valores da Mensalidade</h2>
+        <img src="images/mensalidade.jpg" alt="Valores da mensalidade" style="max-width: 100%; margin: 20px 0;">
+        <a href="https://wa.me/5588993509111?text=Gostaria%20de%20mais%20informações%20sobre%20as%20mensalidades%20da%20Academia%20Treinart" class="cta">
+            <img src="whatsapp-icon.png" alt="WhatsApp" style="width: 20px; vertical-align: middle; margin-right: 8px;">
+            Fale Conosco no WhatsApp
+        </a>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Academia Treinart | Todos os direitos reservados</p>
+        <p>Localizada na R. Santa Cecília, 176 - Socorro, Juazeiro do Norte - CE</p>
+        <p><a href="https://wa.me/5588993509111">Entre em contato conosco</a></p>
+    </footer>
+
+</body>
+</html>
